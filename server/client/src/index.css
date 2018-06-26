@@ -6,11 +6,58 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: white;
+  background-color: rgb(255, 212, 212);
 }
 
 a {
   color: black;
+}
+
+a:hover {
+  color: gray;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  display: inline;
+  padding: 5px;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-around;
+  margin: 0 100px 30px 100px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  padding: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.title {
+  padding: 20px;
+  font-size: 75px;
 }
 
 .header, .content {
@@ -20,21 +67,26 @@ a {
   align-items: center;
 }
 
-.navBar {
+.content {
+  background-color: rgb(195, 255, 235);
+  width: 100%;
+  height: 500px;
+}
+
+.portfolio {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   justify-content: center;
+  align-items: center;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    background-color: #f1f1f1;
+.portfolioItem {
+  text-align: center;
+  margin: 15px;
 }
 
-li {
-  display: inline;
-  padding: 5px;
+.copyright {
+  position: fixed;
+  bottom: 5px;
 }
