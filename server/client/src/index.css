@@ -1,0 +1,40 @@
+html, body, .grid, .column {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: white;
+}
+
+a {
+  color: black;
+}
+
+.header, .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+li {
+  display: inline;
+  padding: 5px;
+}
