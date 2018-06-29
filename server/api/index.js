@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
-// const router = require('../routes/index.js');
+const router = require('./router.js');
 const path = require('path');
 
 const PORT = process.env.PORT || 1234
@@ -13,7 +13,7 @@ server.use(bodyParser.urlencoded({
 }));
 
 server.use(express.static(path.join(__dirname, '../client/public')));
-// server.use('/', router);
+server.use('/', router);
 
 server.get('*', (req, res) => res.sendFile(path.resolve(__dirname, '../client/public/index.html')));
 

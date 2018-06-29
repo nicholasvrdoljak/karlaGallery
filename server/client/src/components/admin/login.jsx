@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 export default class Login extends Component {
     constructor(props) {
@@ -16,6 +17,26 @@ export default class Login extends Component {
     submit(event) {
         event.preventDefault();
         console.log(this.state);
+        if (!this.state.user && !this.state.pass) {
+            alert('Please enter a username and password');
+        } else if (!this.state.user) {
+            alert('Please enter a username');
+        } else if (this.state.user) {
+            alert('Please enter a password');
+        } else {
+            axios.get(`/signin/${this.state.user}/${this.state.pass}`)
+            .then(response => {
+                if (response.data === 'wrong') {
+                    alert('Username or Password is incorrect');
+                } else {
+                    sessionStorage.setItem('jwtToken', response.data.token);
+                    axios.get('/signInToken', { params: { token: sessionStorage.getItem('jwtToken') }});
+                }
+            })
+            .catch(err => {
+                console.log('Login error', err);
+            });
+        }
     }
 
     render() {
