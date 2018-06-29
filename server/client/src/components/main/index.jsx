@@ -26,6 +26,7 @@ const Main = (props) => (
             <Route path='/portfolio/drawing' component={Drawing}/>
             <Route path='/portfolio/printing' component={Printing}/>
             <Route path='/login' component={Login}/>
+            <Route path='/login/*' component={Login} />
             <Route path='/dashboard' component={Dashboard} />
         </Switch>
     </main>
