@@ -14,20 +14,19 @@ import Login from '../admin/login.jsx';
 import Dashboard from '../admin/dashboard.jsx';
 
 
-const Main = (props) => (
+const Main = () => (
     <main>
         <Switch>
             <Route exact path='/' render={() => <Redirect to={{ pathname: '/home' }} />} />
-            <Route path='/home' component={Home}/>
-            <Route path='/aboutme' component={AboutMe}/>
-            <Route path='/contact' component={Contact}/>
+            <Route exact path='/home' component={Home}/>
+            <Route exact path='/aboutme' component={AboutMe}/>
+            <Route exact path='/contact' component={Contact}/>
             <Route exact path='/portfolio' component={Portfolio}/>
-            <Route path='/portfolio/painting' component={Painting}/>
-            <Route path='/portfolio/drawing' component={Drawing}/>
-            <Route path='/portfolio/printing' component={Printing}/>
-            <Route path='/login' component={Login}/>
-            <Route path='/login/*' component={Login} />
-            <Route path='/dashboard' component={Dashboard} />
+            <Route exact path='/portfolio/painting' component={Painting}/>
+            <Route exact path='/portfolio/drawing' component={Drawing}/>
+            <Route exact path='/portfolio/printing' component={Printing}/>
+            <Route exact path='/login' component={Login}/>
+            <Route exact path='/dashboard' render={() => sessionStorage.getItem('jwtToken') ? (<Dashboard />) : (<Redirect to={{ pathname: '/home' }}/>)} />
         </Switch>
     </main>
 );

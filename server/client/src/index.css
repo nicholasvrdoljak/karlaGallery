@@ -32,9 +32,10 @@ li {
 .navBar {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-content: space-around;
-  margin: 0 100px 30px 100px;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  margin: 0 100px 10px 100px;
 }
 
 .dropdown {
@@ -53,11 +54,6 @@ li {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-.title {
-  padding: 20px;
-  font-size: 75px;
 }
 
 .header, .content {
@@ -84,6 +80,24 @@ li {
 .portfolioItem {
   text-align: center;
   margin: 15px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactTitle {
+  width: 50%;
+  padding: 40px;
+}
+
+.contactItem {
+  width: 50%;
+  border-left: black 1px solid;
+  padding: 40px;
 }
 
 .copyright {
