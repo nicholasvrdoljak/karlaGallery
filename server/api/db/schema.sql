@@ -11,3 +11,10 @@ CREATE TABLE users (
   PRIMARY KEY (`id`),
   INDEX `username_idx` (`username`)
 );
+
+CREATE TABLE artwork (
+  `id` INT AUTO_INCREMENT, 
+  `link` VARCHAR(255) NOT NULL, 
+  `type` VARCHAR(255) NOT NULL, 
+  PRIMARY KEY (`id`)
+)
