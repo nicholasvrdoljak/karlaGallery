@@ -6,11 +6,14 @@ import Main from '../main/index.jsx';
 export default class Header extends Component {
     render() {
         return (
-            <div className='header'>
+            // <div className='header'>
+            <div>
+
+
+                <div className='navBar'>
 
                 <Link to='/home'><h2>Karla Berjikian</h2></Link>
-                <div className='navBar'>
-                    <ul>
+                    <ul className='navBarContent'>
                         <li><Link to='/aboutme'>Biography</Link></li>
 
                         {/* <li className='dropdown'>
@@ -35,7 +38,7 @@ export default class Header extends Component {
                     <Main/>
                 </span>
 
-                <div className='copyright'>Copyright K.Berjikian 2018</div>
+                <span className='copyright'>&#169; K.Berjikian 2018</span>
 
             </div>
         );
