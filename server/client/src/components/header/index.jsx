@@ -12,7 +12,7 @@ export default class Header extends Component {
 
                 <div className='navBar'>
 
-                <Link to='/home'><h2>Karla Berjikian</h2></Link>
+                <Link to='/home' className='nameHeader'><h2>Karla Berjikian</h2></Link>
                     <ul className='navBarContent'>
                         <li><Link to='/aboutme'>Biography</Link></li>
 
