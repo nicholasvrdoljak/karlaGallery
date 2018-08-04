@@ -10,9 +10,9 @@ const options = {
 
 
 module.exports = {
-    entry: ['babel-polyfill', './server/client/src/index.jsx'],
+    entry: ['babel-polyfill', './client/src/index.jsx'],
     output: {
-        filename: './server/client/public/bundle.js'
+        filename: './client/public/bundle.js'
     },
     watch: true,
     devtool: options.devTool,
